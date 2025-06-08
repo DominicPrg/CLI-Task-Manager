@@ -40,3 +40,17 @@ What issues that I stumbled upon:
 How I solved/plan to solve the issue:
 - I installed a C++ compiler and extensions just to be safe. I also Google'd how to create a C++ project on VS Code. I solved this issue successfully.
 - I'll have to figure out what exactly is missing between the IDE and VS Code itself to fail in debugging my code. I'll have to use Google and identify if I overlooked an important step while setting up the programming environment.
+
+### Day 3 - 6/8/2025 - addTask() and displayTasks() Functions
+What I accomplished: 
+- Implemented the addTask() and displayTasks() functions of class TaskManager.
+- Ensured that each Task object is stored in a vector named tasks in TaskManager.
+
+What I learned:
+- Nothing new. I have a lot of experience with implementing the code for classes, so the current work I did for today was straightforward and nothing suprising.
+
+What issues that I stumbled upon:
+- Same as yesterday: debugging the code on a driver program since the debugger can't access the project on my directory. More specifically, the files won't appear in the project folder when opening the project folder through VS Code itself, and it seems like the "cwd" of the launch.json file can't access the files that I specify.
+
+How I solved/plan to solve the issue:
+- I'm looking at the common problems for why the files won't appear in the project folder when accessing through VS Code itself, as provided by Google Overview AI. Until then, I'm writing and debugging all of my code on a VS Studio project as an alternative. If I can't resolve the debugging issue that I'm experiencing with VS Code, I'll need to figure out how to transfer the nlohmann/json library to VS Studio since I downloaded the nlohmann/json library from GitHub (which connects to VS Code for programming). 
