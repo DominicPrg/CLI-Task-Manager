@@ -53,4 +53,17 @@ What issues that I stumbled upon:
 - Same as yesterday: debugging the code on a driver program since the debugger can't access the project on my directory. More specifically, the files won't appear in the project folder when opening the project folder through VS Code itself, and it seems like the "cwd" of the launch.json file can't access the files that I specify.
 
 How I solved/plan to solve the issue:
-- I'm looking at the common problems for why the files won't appear in the project folder when accessing through VS Code itself, as provided by Google Overview AI. Until then, I'm writing and debugging all of my code on a VS Studio project as an alternative. If I can't resolve the debugging issue that I'm experiencing with VS Code, I'll need to figure out how to transfer the nlohmann/json library to VS Studio since I downloaded the nlohmann/json library from GitHub (which connects to VS Code for programming). 
+- I'm looking at the common problems for why the files won't appear in the project folder when accessing through VS Code itself, as provided by Google Overview AI. Until then, I'm writing and debugging all of my code on a VS Studio project as an alternative. If I can't resolve the debugging issue that I'm experiencing with VS Code, I'll need to figure out how to transfer the nlohmann/json library to VS Studio since I downloaded the nlohmann/json library from GitHub (which connects to VS Code for programming).
+
+### Day 4 - 6/9/2025 - CLI Outputting and Formatting
+What I accomplished:
+- Completed the design for the formatting of Task objects in the displayTasks() function of TaskManager. When polishing my project during the final week, I'll look into using the iomanip library to potentially assist with cleaner formatting.
+
+What I learned:
+- I learned how to implement the ASCII color features in my C++ code to distinguish certain texts of the output apart from each other. I was completely unaware of this feature in C++.
+
+What issues that I stumbled upon:
+- None significant. The VS Code issue remains unresolved, but I didn't tinker with it today.
+
+How I solved/plan to solve the issue:
+- No significant issues occurred today. As for the VS Code issue, I should refer to advice from yesterday.
