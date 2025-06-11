@@ -67,3 +67,21 @@ What issues that I stumbled upon:
 
 How I solved/plan to solve the issue:
 - No significant issues occurred today. As for the VS Code issue, I should refer to advice from yesterday.
+
+### Day 5 - 6/10/2025 - completeTask() and deleteTask()
+What I accomplished:
+- Implemented the code for the completeTask() function and deleteTask() functions. I haven't thoroughly tested each function yet, however.
+- Added a custom exception class named DeleteNonexistentTaskError{} for dealing with input of invalid ID's.
+
+What I learned:
+- I re-learned how to create a simple custom exception class for handling exceptions.
+
+What issues that I stumbled upon:
+- It had been a while since I've programmed a custom exception class, so I was somewhat uncertain of how to move further with the information that I could remember at the time.
+- Accessing the elements of the vector of Task objects properly based on the Task's ID. For example, the first task in the 'tasks' vector is set to 1 by default, but accessing the element of the first Task object through the 'tasks' vector would consist of doing so through 'tasks.at(0)'. Essentially, assuming that the first element Task object's ID is always initialized with 1, then the Task object's ID is equivalent to the element 1 number below it.
+- Debugger encounterd an unreferenced local variable while catching a DeleteNonexistentTaskError object.
+
+How I solved/plan to solve the issue:
+- I did some Googling and reread through an example of a custom exception class from COMS-215.
+- I simply needed to take a step back and process the equivalency between the Task object's ID and position as a vector element. More often that not, my mind can unncessarily amplify the intricacy of a problem if it's not putting the matter at full attention, which is what occured. Practicing mindfulness, though, is a rather beneficial remedy for instances like this.
+- This issue was encounterd towards the end of the programming session, so I won't know for certain until my next session or afterwards. 
