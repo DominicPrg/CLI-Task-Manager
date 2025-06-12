@@ -105,3 +105,19 @@ How I solved/plan to solve the issue:
 - I simply had to remove the variable aspect of the argument in the catch block. For example, instead of "const DeleteNonexistTaskError& e" as the argument, I removed the 'e' and the argument then became "const DeleteNonexistTaskError&".
 - I decided to refrain from utilizing any default constant values, instead opting to initialize the data members to their respective default values in the default constructor.
 - I changed to passing the TaskManager object by reference for the processInput() function.
+
+### Day 7 - 6/12/2025 - First Weekly Summary
+What I've done this week:
+- I finalized my SMART goal and 3-week project timeline.
+- I defined core features of the program.
+- I chose C++ and the nlohmann/json library for data storage.
+- I designed the initital class structures for Task and TaskManager.
+- I outlined expected CLI input/output format. Although, it's not polished, but I'll add the final touches during the third week of this project's timeline, which is reserved for polishing the program.
+- I created the necessary program files (Task.h, Task.cpp, TaskManager.h, and main.cpp).
+
+What I've learned this week:
+- How to plan a project from scratch using SMART goals.
+- How to break down abstract features into clear specifications that can be performed by the client user.
+- Importance of documenting my thought process early.
+
+Reflection: This week demonstrated the value of clear structure of a program before dividing it into code. I've come to realize that I can work more productively if I've visualized the stage of programming for each part of the software. It was satisfying being able to code and implement the functions for a Task object in TaskManager, since I was handling instructions on how to operate said custom objects. It helped to illuminate the power of object-oriented programming.
