@@ -84,4 +84,24 @@ What issues that I stumbled upon:
 How I solved/plan to solve the issue:
 - I did some Googling and reread through an example of a custom exception class from COMS-215.
 - I simply needed to take a step back and process the equivalency between the Task object's ID and position as a vector element. More often that not, my mind can unncessarily amplify the intricacy of a problem if it's not putting the matter at full attention, which is what occured. Practicing mindfulness, though, is a rather beneficial remedy for instances like this.
-- This issue was encounterd towards the end of the programming session, so I won't know for certain until my next session or afterwards. 
+- This issue was encounterd towards the end of the programming session, so I won't know for certain until my next session or afterwards.
+
+### Day 6 - 6/11/2025 - Refining Code
+What I accomplished:
+- Created a printCommands() function to display the available commands for the program in the TaskManager class.
+- Separated the implementation of class Task's code in the header file into a separate implementation file.
+- Created the client file where the main program will operate for the user. This client file consists of two user-defined functions to simulate the task managing environment: runProgram() and processInput(). A short message is outputted towards the user where they have the option to type into the terminal the following commands: "help", "add", "delete", and "list". Once they've finished their business, they can type "exit" to close the program.
+
+What I learned:
+- I re-learned the properties of using constant values in classes. They can be rather tricky at first to implement on my own.
+- I learned a little bit more about the error of passing an unreferenced local variable as an argument.
+
+What issues that I stumbled upon:
+- Initially, the debugger encountered an unreferenced local variable while catching a DeleteNonexistentTaskErrorObject (the issue that I encountered towards the conclusion of my previous coding session).
+- Constants in user-defined classes can be quite tricky to deal with, which was one of the primary challenges that I faced today. For example, in my Task class, I originally had constant values for each of the data members for the default constructor. However, defining the constants in the class declaration of the header file (as I vaguley remembered from the past) leads to runtime errors if not written in a correct manner. I attempted declaring them in the header file and then initializng them with a value in the Task.cpp implementation file. However, my efforts didn't amount to the level of knowledge that I had at that point.
+- In my client program, I accidentally overlooked the fact that I passed my TaskManager object by value (instead of by reference) in the parameter of the processInput() function, leading to unintended output when testing the program.
+
+How I solved/plan to solve the issue:
+- I simply had to remove the variable aspect of the argument in the catch block. For example, instead of "const DeleteNonexistTaskError& e" as the argument, I removed the 'e' and the argument then became "const DeleteNonexistTaskError&".
+- I decided to refrain from utilizing any default constant values, instead opting to initialize the data members to their respective default values in the default constructor.
+- I changed to passing the TaskManager object by reference for the processInput() function.
