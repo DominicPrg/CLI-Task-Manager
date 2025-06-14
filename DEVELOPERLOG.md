@@ -143,3 +143,24 @@ How I solved/plan to solve the issue:
 - For the MinGw-x64 tool chain blockade, I'm not entirely certain of what my next steps will be. I did follow the instructions on the webpage, so the error's origins can be assumed to pertain to my PC, rather than the software itself. I'll have to conduct some exploration to what said origins can be, but I don't have any ideas at the moment.
 - For the uncertainity towards the advanced code, a lot of the misunderstanding can be attributed to being unaware of advanced programming techniques and concepts, which will take more time and learning to embrace. If I continue to consume more C++ content through books and other sources of media, I'll eventually reach such a stage.
 - In order to connect the nlohmann/json library to my VS Studio project, after some brainstorming and reviewing my options, I concluded with copying-and-pasting the contents of the 'json.hpp' file into a header file for my VS Studio project.
+
+### Day 9 - Save Tasks to File
+Personal note: Today was, by far, my most exciting day of the project timeline thus far. I obtained more practical applications for JSON objects while writing the script for my project.
+
+What I accomplished:
+- I implemented the saveToFile() function in the TaskManager class for saving the Task objects onto a ".json" file for the client user to save.
+- For the client program, I created a convertToJsonFile() helper function to be used in the runProgram() function, to prompt the user to either save or discard the data entered in the client program.
+- In the TaskManager class, I created two prviate helper functions: to_json() and from_json(). to_json() converts a Task object's data into a JSON object, from_json() converts a JSON object's data into a Task object.
+
+What I learned:
+- I learned more on how to create a JSON object in C++ with the nlohmann/json library, how to serialize JSON objects, and how to create JSON arrays.
+- I learned how to format JSON objects and how to save them onto a ".josn" file, through the nlohmann/json library specifically.
+- I learned that I could create ".json" files easily by appending ".json" at the end of the file name.
+
+What issues that I stumbled upon:
+- I needed to brush up on my file handling methods and techniques (provided through the C++ fstream library).
+- In the client convertToJsonFile() function, when writing downn the while loop for whether to output an error message and to prompt the client user to re-enter their answer if their response wasn't 'y' and 'n', I mistook using the '||' (OR operator) in place of the '&&' operator (AND operator). This meant that entering one answer, regardless of what it is, would always lead to the while loop repeating since the '||' operator indicates that the other response isn't equal to that one (there can't be a 'y' and 'n' response simultaneously).
+
+How I solved/plan to solve the issue:
+- I referenced Google on how to implement an ofstream object and certain functions from the fstream library (including is_open() and close()).
+- I replaced the '||' operator with the '&&' operator.
