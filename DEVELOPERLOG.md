@@ -121,3 +121,25 @@ What I've learned this week:
 - Importance of documenting my thought process early.
 
 Reflection: This week demonstrated the value of clear structure of a program before dividing it into code. I've come to realize that I can work more productively if I've visualized the stage of programming for each part of the software. It was satisfying being able to code and implement the functions for a Task object in TaskManager, since I was handling instructions on how to operate said custom objects. It helped to illuminate the power of object-oriented programming.
+
+# Week 2 
+
+### Day 8 - Learn JSON + Setup Library
+What I accomplished:
+- Successfully integrated the nlohmann/json library into my project.
+- Tested creating an object of JSON to familiarize myself with the class.
+
+What I learned:
+- I learned what JSON (short for JavaScript Object Notation) is defined as: it's a lightweight data-interchange. It's indepedent of any programming language, but its conventions draw strong similiarites to the C family of languages (C, C++, C#, Java, etc.).
+- I learned some basic features of the nlohmann/json library.
+- I learned that I could copy-and-paste the "json.hpp" file, available on the GitHub nlohmann/json repository, into my VS Studio to run the code on that platform.
+
+What issues that I stumbled upon:
+- For VS Code, I tried following the instructions on the official VS Code webpage (https://code.visualstudio.com/docs/languages/cpp) to restart the process for running C++ successfully on the platform. However, when I installed MinGw-x64 for Windows and tried installig the tool chain in a terminal, I was met with an error that stated that the program couldn't lock the database. I haven't been able to overcome this blockade since.
+- Initially, I endured great difficulty trying to read and understand all of the code, examples, and tutorials posted on the GitHub nlohmann/json library repository webpage. This is because I wasn't able to understand the majority of the code displayed at my current C++ proramming level.
+- It was challenging trying to connect the nlohmann/json library to my VS Studio project, as I was bemused on how to approach doing so. 
+
+How I solved/plan to solve the issue:
+- For the MinGw-x64 tool chain blockade, I'm not entirely certain of what my next steps will be. I did follow the instructions on the webpage, so the error's origins can be assumed to pertain to my PC, rather than the software itself. I'll have to conduct some exploration to what said origins can be, but I don't have any ideas at the moment.
+- For the uncertainity towards the advanced code, a lot of the misunderstanding can be attributed to being unaware of advanced programming techniques and concepts, which will take more time and learning to embrace. If I continue to consume more C++ content through books and other sources of media, I'll eventually reach such a stage.
+- In order to connect the nlohmann/json library to my VS Studio project, after some brainstorming and reviewing my options, I concluded with copying-and-pasting the contents of the 'json.hpp' file into a header file for my VS Studio project.
