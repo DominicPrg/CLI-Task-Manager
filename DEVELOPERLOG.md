@@ -124,7 +124,7 @@ Reflection: This week demonstrated the value of clear structure of a program bef
 
 # Week 2 
 
-### Day 8 - Learn JSON + Setup Library
+### Day 8 - 6/13/2025 - Learn JSON + Setup Library
 What I accomplished:
 - Successfully integrated the nlohmann/json library into my project.
 - Tested creating an object of JSON to familiarize myself with the class.
@@ -144,7 +144,7 @@ How I solved/plan to solve the issue:
 - For the uncertainity towards the advanced code, a lot of the misunderstanding can be attributed to being unaware of advanced programming techniques and concepts, which will take more time and learning to embrace. If I continue to consume more C++ content through books and other sources of media, I'll eventually reach such a stage.
 - In order to connect the nlohmann/json library to my VS Studio project, after some brainstorming and reviewing my options, I concluded with copying-and-pasting the contents of the 'json.hpp' file into a header file for my VS Studio project.
 
-### Day 9 - Save Tasks to File
+### Day 9 - 6/14/2025 - Save Tasks to File
 Personal note: Today was, by far, my most exciting day of the project timeline thus far. I obtained more practical applications for JSON objects while writing the script for my project.
 
 What I accomplished:
@@ -165,7 +165,7 @@ How I solved/plan to solve the issue:
 - I referenced Google on how to implement an ofstream object and certain functions from the fstream library (including is_open() and close()).
 - I replaced the '||' operator with the '&&' operator.
 
-### Day 10 - Load Tasks from File
+### Day 10 - 6/15/2025 - Load Tasks from File
 
 What I accomplished;
 - I implemented the loadFromFile() function in the TaskManager class to load JSON objects from a ".json" file for the client user to use in the client program.
