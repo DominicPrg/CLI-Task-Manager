@@ -164,3 +164,20 @@ What issues that I stumbled upon:
 How I solved/plan to solve the issue:
 - I referenced Google on how to implement an ofstream object and certain functions from the fstream library (including is_open() and close()).
 - I replaced the '||' operator with the '&&' operator.
+
+### Day 10 - Load Tasks from File
+
+What I accomplished;
+- I implemented the loadFromFile() function in the TaskManager class to load JSON objects from a ".json" file for the client user to use in the client program.
+- I implemented an openJsonFile() helper function for the runProgram() function in the client program to prompt the client user to load previous tasks if desired.
+
+What I learned:
+- I learned how to load a JSON object from a ".json" file into a C++ program via the nlohmann/json library.
+
+What issues that I stumbled upon:
+- I was bemused on how to approach loading data from a ".json" file altogether, as it's foreign terrain to me.
+- There's a logic error where when I load the JSON objects from the ".json" file and convert them to Task objects, the 'nextId' data member is initially still set to 0, causing incorrect assignment and ordering of ID's for each new Task object created after the loading of the Task objects from the ".json" file.
+
+How I solved/plan to solve the issue:
+- I referenced Google for a referesher on using ifstream and received advice/assistance from ChatGPT/GitHub Copilot AI to implement the code for loading data from a ".json" file.
+- I intend to solve this problem by ensuring that 'nextId' is incremented each time a loaded JSON object is converted to a Task object and pushed back in the 'tasks' vector.
