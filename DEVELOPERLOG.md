@@ -167,7 +167,7 @@ How I solved/plan to solve the issue:
 
 ### Day 10 - 6/15/2025 - Load Tasks from File
 
-What I accomplished;
+What I accomplished:
 - I implemented the loadFromFile() function in the TaskManager class to load JSON objects from a ".json" file for the client user to use in the client program.
 - I implemented an openJsonFile() helper function for the runProgram() function in the client program to prompt the client user to load previous tasks if desired.
 
@@ -181,3 +181,18 @@ What issues that I stumbled upon:
 How I solved/plan to solve the issue:
 - I referenced Google for a referesher on using ifstream and received advice/assistance from ChatGPT/GitHub Copilot AI to implement the code for loading data from a ".json" file.
 - I intend to solve this problem by ensuring that 'nextId' is incremented each time a loaded JSON object is converted to a Task object and pushed back in the 'tasks' vector.
+
+### Day 11 - 6/16/2025 - Error Handling
+
+What I accomplished:
+- I implemented a couple of error handling lines of code in my "loadToJsonFile()" function (the function that loads data from a ".json" file before the main program begins) and "convertToJsonFile()" function (the function that saves the data accumulated through the 'tasks' vector into a ".json" file). If the user decides to load or save their data into/from a ".json" file, the user has to type out the name of the ".json" file name that they'll be calling to load or save their data from, and defensive programming has been enacted to protect the program from bugs when it comes to undefined file names and invalid data structures in the ".json" file (since there exists a specific formatting of JSON objects).
+- Likewise, I also adjusted the loadFromFile() and saveToFile() functions to accomodate for the error handling.
+
+What I learned:
+- I learned the existence of json::parse_error and json::exception (two types of exceptions built into the nlohmann/json library; the first to detect invalid parsing in a JSON structure and the othr for more general errors (I'm assuming)).
+
+What issues that I stumbled upon:
+- I didn't stumble upon any significant issues today. I was unfamiliar with how to throw certain exceptions tied to the nlohmann/json library due to my beginner phase, and how to check for corrupted data or unexpected structures, but it was easily resolved with the help of AI.
+
+How I solved/plan to solve the issue:
+- I had AI guide me on how to execute the necessary statements. I typed out the suggestion from AI by hand into my code (as opposed to directly copying-and-pasting) in order to build applicable experience to reference to in the future.
