@@ -196,3 +196,20 @@ What issues that I stumbled upon:
 
 How I solved/plan to solve the issue:
 - I had AI guide me on how to execute the necessary statements. I typed out the suggestion from AI by hand into my code (as opposed to directly copying-and-pasting) in order to build applicable experience to reference to in the future.
+
+### Day 12 - 6/17/2025 - Optional Enhancements
+
+What I accomplished:
+- I implemented the early stages of a searchForTask() function that allows the user to search for a function based on the following criteria: keyword, status or ID.
+- I've declared (but not defined) private helper functions for searchForTask() that perform their respective searches based on the criteria: searchByKeyword(), searchByStatus(), and searchByID().
+- I decided to privatize the displayTasks() function as a helper function (in TaskManager) and created a public listTasks() function that could be substitute its intended role by the client programmer. I made this adjustment because the original listTasks() function only listed the contents of "tasks" vector in the TaskManager class. I realized that in the private helper functions built for searchForTask(), I could recycle the same chunk of code provided in displayTasks() to list the new vectors containing the Task objects found by the specified criteria. 
+
+What I learned:
+- I learned of the technique needed to capitalize all characters in a string via the std::transform function provided by the C++ algorithm library.
+- I learned that it's NOT considered poor practice to use "return" in void functions (my previous programming professor upheld a rule that a function shouldn't utilize "return" to exit out of it needlessly, so I thought of it as a sign as doing so would constitute poor programming practice).
+
+What issue(s) that I stumbled upon:
+- I debated with myself on how to structure the searchForTask(), particulary when it came to the return type of the function. I was inclined to declare and define the function with a return type of bool so that way, if incorrect input was provided by the user in the client program, a simple while loop prompting the user to try again with a valid response could be implemented if the function returns false. However, I thought of a return type of void to be more appropriate since I'm not necessarily trying to confirm if there's a true/false answer to a particular problem in this function. Consequently, this introduced a new issue concerning how to prompt the user to try again since there's no boolean value to return to be utilized in a while loop.
+
+How I solved/plan to solve the issue(s):
+- I already implemented an error message in the searchForTask() function if it doesn't recognize the input by the user. I could simply let the function output the error message and exit the function. This doesn't give the client user an opportunity to try again though; they'd have to re-enter "search" in the terminal again to invoke the searchForTask() function.
