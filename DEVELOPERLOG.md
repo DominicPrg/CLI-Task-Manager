@@ -230,3 +230,19 @@ What issue(s) that I stumbled upon:
 
 How I solved/plan to solve the issue(s):
 - I feel as if slowly transporting the code and ensuring all of the files are compatabile with one another would serve as the most practical solution in this scenario.
+
+### Day 14 - 6/19/2025 - Second Weekly Summary
+
+What I've done this week:
+- I introduced the nlohmann/json library for modern C++ into my task manager program, in order to save the data collected from the program into a ".json" file (through the saveToFile() function) and to load data from a ".json" file into the program (through the loadFromFile() function).
+- I implemented a couple of error-handling techniques to address invalid input and/or invalid JSON structures.
+- I've barely introduced an optional feature to my task manager program to search for all tasks pertaining to a certain criteria (whether it'd be through keyword, status, or ID). However, I wasn't able to expand upon it and I've decided to shelf the feature for the time-being. I'll consider implementing the function if sufficient time allows during the course of next week.
+- I've began modularing my code into more separate files (besides the header and implementation files for classes Task and TaskManager), particualry for the storage functions (those only being saveToFile() and loadFromFile()) and utility functions (private helper functions in TaskManager to advocate for pleasant code readibility).
+
+What I've learned this week:
+- I've learned what JSON is, how to utilize the nlohmann/json library for my C++ program (and potentially for additional programs in the future), and a few of the functions associated with the nlohmann/json library.
+- I've re-learned how to utilize the fstream for file handling.
+- I've re-learned how to create a custom class exception, and a couple of exceptions available in the nlohmann/json library.
+- I've re-learned how to capitalize a string through the transform() function provided in the C++ algorithm library.
+
+Reflection: This week was productive and exciting through the fact that I learned about what JSON is, and how to implement it in a C++ program. Similiar to the gratification grasped from last week's module, I gained immense satisfaction through the application of JSON objects in my task manager program. Furthermore, I especially savored transforming unique lines of code into private helper functions. I thought of it as an excellent method to improving the readibility of my source code. Although I didn't come around to implementing the optional enhancement of searching a task by criteria, I'm not too concerned by this detail since it wasn't a core feature to the program, and I can advance work on if it next week's module permits. That being said, I feel as if I'm a good position to proceed with next week's goal of polishing and error-checking my program.
