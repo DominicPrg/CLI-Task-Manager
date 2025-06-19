@@ -1,6 +1,6 @@
+#ifndef TASK_CPP_
+#define TASK_CPP_
 #include "Task.h"
-#include <iostream>
-#include <string>
 
 Task::Task() {
      title = "Untitled";
@@ -32,3 +32,5 @@ std::string Task::getStatus() const {
      }
      return "Pending";
 }
+
+#endif
