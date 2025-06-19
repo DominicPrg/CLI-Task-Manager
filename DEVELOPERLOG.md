@@ -213,3 +213,20 @@ What issue(s) that I stumbled upon:
 
 How I solved/plan to solve the issue(s):
 - I already implemented an error message in the searchForTask() function if it doesn't recognize the input by the user. I could simply let the function output the error message and exit the function. This doesn't give the client user an opportunity to try again though; they'd have to re-enter "search" in the terminal again to invoke the searchForTask() function.
+
+### Day 13 - 6/18/2025 - Modularity
+
+What I accomplished:
+- I identified modules of code throughout my TaskManager class that could serve as private helper functions in order to simplify the readability of my code.
+- Originally, I had both the header and implementation code of the TaskManager in the header file (since I learned in the past that with longer implementation files, it's more reasonable to include it in the header file under the class declaration). However, I decided to separate it into its own implementation file (TaskManager.cpp) as not only suggested by AI, but since it simplifies the readibility of the header file.
+- I've created two files dedicated to declaring and defining the storage functions (those being, saveToFile() and loadFromFile()) to enahnce the modularity of my program's source code.
+
+What I learned:
+- I re-learned that in the implementation file, the header files included in the implementation's header file don't need to be included again since the implementation file obtains access to those relevant header files when it includes its own header file. I vaguely remembered this standard, but I had forgotten it to an extent as I hadn't practiced the execution of it in a while.
+- I learned that even some functions of a class can be further modularized into different files for greater simplicity in the source code.
+
+What issue(s) that I stumbled upon:
+- It proved to be more challenging to brainstorm how to neatly transport modules of my source code into their respective files (specifically when it came to the storage functions and eventually, the helper functions). I'm not too familiar with modularizing my program's source code to this extent, (in the past, I've only had to modularize header and implementation files) so I dealt with the concern of incurring a tremendous error that would be difficult to pinpoint if inadequate caution was exercised. I was also concerned of easily becoming too confused over the placement of each module of code in the various files.
+
+How I solved/plan to solve the issue(s):
+- I feel as if slowly transporting the code and ensuring all of the files are compatabile with one another would serve as the most practical solution in this scenario.
