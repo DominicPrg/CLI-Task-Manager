@@ -246,3 +246,23 @@ What I've learned this week:
 - I've re-learned how to capitalize a string through the transform() function provided in the C++ algorithm library.
 
 Reflection: This week was productive and exciting through the fact that I learned about what JSON is, and how to implement it in a C++ program. Similiar to the gratification grasped from last week's module, I gained immense satisfaction through the application of JSON objects in my task manager program. Furthermore, I especially savored transforming unique lines of code into private helper functions. I thought of it as an excellent method to improving the readibility of my source code. Although I didn't come around to implementing the optional enhancement of searching a task by criteria, I'm not too concerned by this detail since it wasn't a core feature to the program, and I can advance work on if it next week's module permits. That being said, I feel as if I'm a good position to proceed with next week's goal of polishing and error-checking my program.
+
+# Week 3
+
+### Day 15 - 6/20/2025 - Full Feature Testing
+
+What I accomplished:
+- I manually tested every function containing a core feature of the program.
+- I tested a couple of edge cases, such as accessing a non-existent task or loading a file with an invalid JSON structure.
+- I addressed cases where the user may enter an empty string (by pressing the ENTER key with no other input) by creating a helper function that ensures a valid string is entered.
+- I addressed an error in which an empty name for a task may be inputted by the client user.
+- I created an additional boolean public member function in TaskManager called "isTaskManagerEmpty()" that confirms whether or not a TaskManager object's "tasks" vector is empty or not, returing the boolean value accordingly.
+
+ What I learned:
+- I learned that, through the cctype library, I could confirm if a character is empty or not (by "empty", if it's a tab or ENTER key) through the isblank() function.
+
+What issue(s) that I stumbled upon:
+- I haven't much luck in properly implementing the isblank() function for preventing empty character inputs. For example, the beginning prompt requires that a character input of either 'y' or 'n' be supplemented. If an irrelevant character is inputted, such as 'a' or 'd', previous error-checking code will enter a while loop with a condition that the character input isn't equal to 'y' or 'n'. Despite this, if the user inputs the ENTER keyboard without writing anything prior, a newline will occur and this will repeat until the user provides a valid input.
+
+How I solved/plan to solve the issue:
+- Instead of declaring an input variable of type char for the "y/n" prompt reponses, I should instead declare it of type string in order to take advantage of the getline() and the string empty() functions (in similiar fashion for the prompts requiring a string response). 
