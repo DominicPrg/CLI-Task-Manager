@@ -265,4 +265,19 @@ What issue(s) that I stumbled upon:
 - I haven't much luck in properly implementing the isblank() function for preventing empty character inputs. For example, the beginning prompt requires that a character input of either 'y' or 'n' be supplemented. If an irrelevant character is inputted, such as 'a' or 'd', previous error-checking code will enter a while loop with a condition that the character input isn't equal to 'y' or 'n'. Despite this, if the user inputs the ENTER keyboard without writing anything prior, a newline will occur and this will repeat until the user provides a valid input.
 
 How I solved/plan to solve the issue:
-- Instead of declaring an input variable of type char for the "y/n" prompt reponses, I should instead declare it of type string in order to take advantage of the getline() and the string empty() functions (in similiar fashion for the prompts requiring a string response). 
+- Instead of declaring an input variable of type char for the "y/n" prompt reponses, I should instead declare it of type string in order to take advantage of the getline() and the string empty() functions (in similiar fashion for the prompts requiring a string response).
+
+### Day 16 - 6/21/2025 - User Experience Polish
+
+What I accomplished:
+- I polished some of the input prompts by adding newlines in between different commands to improve readability of the program's ouput.
+- For TaskManager's displayTasks() helper function, as opposed to coloring the top text of the table as red (the upper half of the table that divides the table based on a Task's data members: ID, title, description, deadline and status) and the list of tasks within the table as green, I took an alternative approach. I decided to change the upper half of the table's text to plain, bold white. The listing of each task is distinguished by it being outputted in green (if status == "Done") or outputted in red (if status == "Pending"). This signals to the user which tasks require immediate attention.
+
+What I learned:
+- I didn't learn anything too worthy of commemoration today.
+
+What issue(s) that I stumbled upon:
+- There exists a flaw within TaskManager's displayTasks() function that involves long string inputs, primarily for the title and description fields (the same flaw can equally occur with the deadline field, but this is unlikely to happen since the user is most likely to provide either a numeric string for the date or a weekday/weekend string). If the string greatly exceeds the formatting of the table's fields by a certain amount of characters, the possibility of the output continuing in a newline is very real. This can intefere with the intended formatting of the table because the characters from the remaining strings will fill in the positions of the fields.
+
+How I solved/plan to solve the issue(s):
+- I'll have to define a character limit to the strings (especially for title and description) to keep the formatting consistent. I want to execute this idea by starting a newline in the output once a character limit is reached, increasing the width of the line to the field's respective position, and continuing the remainder of the string. This will repeat until the string has been completely outputted. There should be an algorithm for this, but if it proves to be to intricate to implement, I might consider adding measures to prevent the string from reaching the character limtit altogether. 
