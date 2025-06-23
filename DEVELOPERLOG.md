@@ -282,7 +282,7 @@ What issue(s) that I stumbled upon:
 How I solved/plan to solve the issue(s):
 - I'll have to define a character limit to the strings (especially for title and description) to keep the formatting consistent. I want to execute this idea by starting a newline in the output once a character limit is reached, increasing the width of the line to the field's respective position, and continuing the remainder of the string. This will repeat until the string has been completely outputted. There should be an algorithm for this, but if it proves to be to intricate to implement, I might consider adding measures to prevent the string from reaching the character limtit altogether. 
 
-### Day 17 - 6/22/2025 - Function Comments
+### Day 17 - 6/22/2025 - Class Documentation
 
 What I accomplished:
 - I wrote comments for all the public functions, the default constructor and the custom-exception class (AccessNonexistTaskError) in TaskManager.h. The comments have been formatted in Dyxogen conventions. A C++ comment for a function in Dyxogen convention consists of a brief description, and elaborates on the paramater(s), return values, and pre-and-post conditions.
