@@ -295,3 +295,17 @@ What issue(s) that I stumbled upon:
 
 How I solved/plan to solve the issue(s):
 - This section is not applicable to today's case. However, next, I need to document my private functions.
+
+### Day 18 - 6/23/2025 - Finalized README.md File
+
+What I accomplished:
+- I updated the README.md file to communicate the project overview, installation instructions, usage, known limitations, and to share my LinkedIn profile and portfolio. 
+
+What I learned:
+- I re-learned text customization in GitHub: how to bolden text and bash text.
+
+What issue(s) that I stumbled upon:
+- I didn't know how to structure, organize and present all of the principal compoments of my README.md file in an hour-long timespan.
+
+How I solved/plan to solve the issue(s):
+- I used ChatGPT to generate the README.md template and I made adjustments where required for logic.
