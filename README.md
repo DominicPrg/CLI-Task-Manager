@@ -48,6 +48,7 @@ If using Visual Studio, simply add all source files and json.hpp to your project
 - No task priority or tagging
 - Not optimized for very large task lists
 - No GUI (CLI only)
+- No organized format for output of long string values
 
 ### 🔮 Potential Future Enhancements
 - Implement task search feature (by keyword, status and ID)
