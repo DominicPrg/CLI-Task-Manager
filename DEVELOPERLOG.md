@@ -309,3 +309,24 @@ What issue(s) that I stumbled upon:
 
 How I solved/plan to solve the issue(s):
 - I used ChatGPT to generate the README.md template and I made adjustments where required for logic.
+
+### Day 19 - 6/25/2025 - Final Reflection
+
+Key takeaways learned from this project:
+- I learned what JSON stands for, how its structured, and how to integrate it into C++ projects through the nlohmann/json library.
+- I learned how to navigate through Git and GitHub.
+- I re-acquianted myself on how to create a custom exception class for my project.
+- I learned about the Dyxogen comment styling conventions that clarify the documentation of my source code.
+- I've re-acquianted myself on how to file handle, and I've learned how to file handle JSON objects.
+- I've expanded upon my modular design intuitions.
+
+Key challenges that arose during this project:
+- I didn't bother addressing the VS Studio code transport after I realized that I could execute my ideas through VS Studio instead. But the error that blocked me from usage of VS Code showed me how little I understand of my PC's operating system.
+- The introduction to the nlohmann/json library was overwhelming as I browsed through the vast amounts of code in the header file. I learned the essentials for my application with the help of ChatGPT, but further analysis is required for safer handling of the library. Much of its capabilities remain lost or poorly understood by me.
+- Engineering the functions and class structure tested my programming intuition and design. I pondered on pertinent attributes tailored to each of the functions (such as return types, breakdown into utility functions), and the blueprint of the Task and TaskManager classes. This challenge accustomed me, to a considerable extent, to software engineering by simplifying and cleaning my code in the most efficient approach possible. This is ideal when one has to work with millions of line of code. It'd be a shame having to sift through intricate spiderwebs of code that could have been vastly simplified if the architecture was thought out better.
+
+My greatest win from this project:
+- My overarching goal coming into this project was to practice and enforce the object oriented programming skills that I developed through the programming courses (COMS-215 and COMS-216) at the Napa Valley College. In my opinion, I feel as if this endeavor achieved success. Through the Task, TaskManager and main files, I distinguished the data members and functions accordingly. For example, a Task object need only concern itself with an ID number particular to that Task through the data member id, not with any other Task. In TaskManager, nextID keeps track of the ordering of said Task objects in a container. This makes sense since TaskManager deals with a vector of Task obejcts through the data member tasks, so it must have a means of numerically recording each Task. Another example, the introduction and instructions for the CLI task manger are written in the main file instead of in the TaskManager class because the main file is designed to facilitate the environment of a task manager program by treating TaskManager as a component to it. Overall, through the knowledge and projects that I was assigned in my college programming courses, I understood both the independencies and dependencies between each class and file.
+
+What I would do differently next time:
+- I'd like to experiment with writing down quick notes for my devlog entries during my programming sessions to concisely encapsulate all of the information that I can communicate. As opposed to remembering it in the final 30 minutes of the daily time allotment for this project.
