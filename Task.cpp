@@ -19,7 +19,8 @@ Task::Task(int taskId, std::string taskTitle, std::string taskDescription, std::
 }
 
 void Task::display() const {
-     std::cout << id << '\t' << '|' << title << '\t' << '|' << description << '\t' << '|' << dueDate << '\t' << '|' << getStatus() << std::endl;
+     //std::cout << id << std::setw(4) << '| ' << title << std::setw(20) << '| ' << description << std::setw(20) << '| ' << dueDate << std::setw(10) << '| ' << getStatus() << std::endl;
+     std::cout << id << '\t' << '\t' << '|' << title << '\t' << '\t' << '|' << description << '\t' << '\t' << '|' << dueDate << '\t' << '\t' << '|' << getStatus() << std::endl;
 }
 
 void Task::toggleComplete() {
@@ -32,5 +33,4 @@ std::string Task::getStatus() const {
      }
      return "Pending";
 }
-
 #endif
